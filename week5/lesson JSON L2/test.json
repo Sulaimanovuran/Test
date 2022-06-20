@@ -1,0 +1,14 @@
+{
+    "id": 1,
+    "name": "John",
+    "hobby": [
+        "fishing",
+        "footbal"
+    ],
+    "ball": {
+        "math": 100,
+        "angl": 50
+    },
+    "child": null,
+    "student": false
+}
