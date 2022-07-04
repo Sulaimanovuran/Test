@@ -1,4 +1,4 @@
-import random
+# import random
 # def get_info():
 #     name = input()
 #     last_name =input()
@@ -100,3 +100,161 @@ import random
 
 # except Exception as n:
 #     p
+
+
+'''
+Втроенные функции
+
+map(func, iterible object)
+'''
+
+# list_str = ['1', '2', '3', '4']
+# list_int = []
+
+# for i in list_str:
+#     list_int.append(int(i))
+
+# list_int = list(map(int, list_str))
+# print (list_int)
+
+# def dollars_to_soms(dollars:int) -> int:
+#     return f'{round(dollars * 84.80)} soms'
+
+# dollars = [100, 50, 25, 90, 65]
+
+# soms = list(map(dollars_to_soms, dollars))
+# print(soms)
+
+'''
+lambda
+'''
+
+# print((lambda x: x ** 2) (56))
+# square = lambda x: x ** 2
+# print(square(56))
+
+# print((lambda x,y,z: x+y+z)(1,2,3)) # 6
+
+# list1 = [1,2,3]
+# list2 = [4,5,6]
+# list3 = [7,8,9]
+# new_list = list(map(lambda x,y,z: x + y + z, list1, list2, list3))
+# print(new_list) #[12, 15, 18]
+
+
+# num_list = [2,4,6,8,9,5,3,3]
+# num_list2 = list(map(lambda x: x * 2, num_list))
+# print(num_list2)
+
+'''
+filter
+'''
+
+# nums = [12,4,4567,89,45,34,2]
+
+# fil_nums = list(filter(lambda num: num % 3 == 0, nums))
+# print(fil_nums)
+
+
+# dict_ = [{'subject': 'Python', 'point': 89}, {'subject': 'js', 'point': 92}, {'subject': 'Python', 'makers': 100}]
+
+# new_dict = list(filter(lambda x: x['subject'] == 'Python', dict_))
+# print(new_dict)
+
+# users = [
+#     {'username': 'Alice123', 'comments': ['i love it', 'good']},
+#     {'username': 'sam45', 'comments': []},
+#     {'username': 'john', 'comments': []},
+#     {'username': 'Raychel','comments': ['i like it']}]
+
+# active_users = list(filter(lambda x: x.get('comments', None), users))
+# inactive_users = list(filter(lambda x: not x.get('comments', None), users))
+# print(active_users)
+# print(inactive_users)
+
+# names = ['Alice', 'Sandra', 'Molly', 'Tim', 'bill', 'ann']
+# greetings = list(map(lambda name: f'Welcome, {name}', filter(lambda x: len(x)>= 5, names)))
+# print(greetings)
+
+'''
+reduce(func, iterible object)
+'''
+
+# from functools import reduce
+
+# numbers = [1,2,3,4]
+
+# sum_ = functools.reduce(lambda x, y: x + y, numbers)
+# print(sum_)               #1+2_|  |_3
+
+
+# numbers  = [78, 5, 45,23, 54656, 456, 456, 345, -435, -45324]
+# max_ = functools.reduce(lambda a, b: a if a > b else b, numbers)
+# print(max_)
+
+
+# numbers = [5,6,8,1,2]
+# multiplay = reduce(lambda x, y: x * y, numbers)
+# print(multiplay)
+
+
+'''
+zip()
+'''
+# list_a = [1,2,3,4,5]
+# listb = ['a', 'b', 'c', 'd', 'e']
+# listc = ['makers', 'bootcamp', 'hello', 'world', 'zip']
+# list_ = list(zip(list_a, listb, listc))
+# list1, list2, list3 = list(zip(*list_))
+# print(list1, list2, list3)
+
+
+
+# print(dir(__builtins__))
+
+'''
+enumerate()
+'''
+
+# seasons = ['spring', 'winter', 'fall', 'summer', 'makers', 'bootcamp']
+# enumerated_seasons = dict(enumerate(seasons, 5))
+# print(enumerated_seasons)
+
+'''
+abs
+'''
+# negative = -123
+# absolute = abs(negative)
+# print(absolute)
+
+'''
+all, any
+'''
+# list_ = [0,0,0,0,0]
+# is_true = all(list_)
+# print(is_true) #False
+
+
+# list_ = [0,0,2,0,0]
+# is_true = any(list_)
+# print(is_true) # True
+
+'''
+ascii()
+ord()
+chr()
+'''
+
+# list_1 = ['makers', 'мейкерс', 23 , 0, '$*']
+# list_2 = ascii(list_1)
+# print(list_2)  -> ['makers', '\u043c\u0435\u0439\u043a\u0435\u0440\u0441', 23, 0, '$*']
+
+
+# print(ord('f')) -> 102
+# print(chr(102)) -> f
+
+'''
+divmod()  ->  tuple  -> (x//y, x%y) 
+'''
+
+# print(divmod(15, 7)) -> (2,1)

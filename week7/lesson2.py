@@ -173,3 +173,41 @@
 #     elif i % 5 == 0:
 #         print('buzz')
 
+# x,y,z = 'John', [1,2,3,4], {'name': 'Eddard', 'last_name':'Stark'}
+# list_= [x,y,z]
+# list1 = [len(i) for i in list_]
+# print(list1)
+
+
+# class Dog:
+#     def voice(self):
+#         print('гав')
+    
+# class Cat:
+#     def voice(self):
+#         print('мяу')
+
+# cat = Cat()
+# dog = Dog()
+
+# def func(animal):
+#     return animal.voice()
+
+# func(cat)
+# func(dog)
+
+
+
+# class Solution:
+#     def longestCommonPrefix(self, strs):
+#          if len(strs) == 0:
+#             return ''
+#          s = strs[0]
+#          for i in range(1, len(strs)):
+#             while strs[i].find(s) != 0 :
+#                 s = s[:-1]
+#          return s
+
+# s = "()[]{}"
+# print(round(len(s) / 2))
+# print(s[round(len(s) /2):] == s[round(len(s) /2)-1::-1])
